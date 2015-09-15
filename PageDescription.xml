@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PageDescription id="..." xmlns="http://jntsys.net/">
+    <properties>
+        <property name="title" value="Модуль приёма заказов" />
+    </properties>
+    
+    <container stelid="SOParameter" in_stream="a_SOParameter"> <!-- structure in_stream - определяет входной поток (файловый, строковый, ...) данных со структурой компонента -->
+        <!-- определение внешних свойств, описывающих что необходимо для данного элементы -->
+        <!--<properties>
+            <property name="dynamic" type="iterative"/>    <!-\- не обязательное своейство, его наличие определяет что элемент динамический (это нужно для подгрузки соответствующих шаблонов для сериализации) -\->
+            <property name="class" value="aaa"/>    <!-\- классы определяется в структуре страницы, а не в самом элементе для того чтобы структура страницы полностью уравляла внешним видом, а в элементе остаётся только его структура (полное отделение внешнего вида от структуры). Это свойство передаётся в качестве параметра XSLT-шаблону сериализующему элемент.  -\->
+            <property name="class_stream" value="c_SOParameter"/> <!-\- поток классов визуального оформления -\->
+        </properties>
+        <classes in_stream="c_SOParameter"> <!-\- class in_stream - определяет входной поток данных со структурой компонента -\->
+            <mapping>
+                <pair sid="" cid=""/>
+            </mapping>
+        </classes>-->
+    </container>
+</PageDescription>

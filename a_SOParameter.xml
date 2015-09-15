@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- element - элемент, представляющий контейнер -->
+<Container type="atom" stelid="SOParameter" element="fieldset" xmlns="http://jntsys.net/">
+    <!-- определение внутренних свойств -->
+    <properties>
+        <!-- name - определяет какое именно свойство данного объекта устанавливается. Будет выбираться из справочника представленного <xsl:key> -->
+        <property name="title" value="Размеры" />
+        <property name="id" value="a_SOParameter" />
+    </properties>
+    
+    <!-- dos - dynamic object structure. Динамика может быть повторяющейся (iter), ...(другие) -->
+    <dos>
+        <!-- iter - iterative, элементы определяющий повторение блоков -->
+        <iter count="3">
+            <layout element="div">
+                <tag type="form" element="label" >
+                    <properties>
+                        <property name="attributes">
+                            <attr name="for" value="[rad_OSize, rad_WSize, rad_PSize]" />
+                        </property>
+                    </properties>
+                    <content value="[Исходный объект, Окно, Готовое изделие]"/>
+                </tag>
+                <iter count="2">
+                    <tag type="form" element="label">
+                        <properties>
+                            <property name="attributes">
+                                <attr name="for" value="[txt_OWidth, txt_OHeight]" />
+                            </property>
+                        </properties>
+                        <content value="[высота, ширина]"/>
+                    </tag>
+                    <tag type="form" element="text">
+                        <properties>
+                            <property name="attributes">
+                                <attr name="id" value="[txt_OWidth, txt_OHeight]"/>
+                                <attr name="size" value="5"/>
+                            </property>
+                        </properties>
+                    </tag>
+                    <tag type="form" element="output">
+                        <properties>
+                            <property name="attributes">
+                                <attr name="name" value="[OWidthUnit, OHeightUnit]"/>
+                                <attr name="for" value="selUnit"/>
+                            </property>
+                        </properties>
+                        <content value="мм"/>
+                    </tag>
+                </iter>
+                <tag type="form" element="radio">
+                    <properties>
+                        <property name="attributes">
+                            <attr name="name" value="Sizes"/>
+                            <attr name="id" value="[rad_OSize, rad_WSize, rad_PSize]"/>
+                            <attr name="value" value="[OSize, WSize, PSize]"/>
+                            <attr name="checked" inum="2"/>    <!-- номер итерации в ходе которой элементу radio будет установлен аттрибут checked -->
+                        </property>
+                    </properties>
+                </tag>
+            </layout>
+        </iter>
+    </dos>
+
+</Container>

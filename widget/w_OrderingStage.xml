@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Только корневые элементы контейнеров называются Widget, Block, Unit,
+     что соответствует соответствующим типам контейнера  -->
+<Widget xmlns="http://www.jntsys.net/" id="w_OrderingStage">
+    <layout element="section" id="l_RenderArea">
+        <!-- корневой тег определяется атрибутом [element] по аналогии с layout (по умолчанию - div)
+             идентификатор передаётся корневому тегу при трансформации -->
+        <container type="unit" element="fieldset" id="u_SelectValuta">
+            <tag type="form" element="label" />
+            <tag type="form" element="select" />
+        </container>
+        <container type="unit" element="fieldset" id="u_SelectUnit">
+            <tag type="form" element="label" />
+            <tag type="form" element="select" />
+        </container>
+    </layout>
+    <layout element="section" id="l_SOParameter">
+        
+    </layout>
+    <layout element="section" id="l_ProductOptions">
+        
+    </layout>
+</Widget>
